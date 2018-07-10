@@ -25,7 +25,7 @@ class Application
         end
       end
     elsif req.path.match(/add/)
-      req.params["item"]
+      item = req.params["item"]
       binding.pry
       if @@items.match(item)
         @@items.each do |item|
