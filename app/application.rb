@@ -22,6 +22,10 @@ class Application
         resp.write "#{item}\n"
         end
       end
+    elsif req.path.match(/add/)
+      @@items.each do |item|
+        @@cart << item
+      end
     else
       resp.write "Path Not Found"
     end
