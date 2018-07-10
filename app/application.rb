@@ -1,4 +1,4 @@
-req 'pry'
+require 'pry'
 
 class Application
 
