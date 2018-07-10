@@ -23,6 +23,7 @@ class Application
         end
       end
     elsif req.path.match(/add/)
+      binding.pry
       if @@items.match(item)
         @@items.each do |item|
           @@cart << item
