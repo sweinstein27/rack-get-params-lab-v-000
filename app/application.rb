@@ -28,7 +28,6 @@ class Application
       item = req.params["item"]
       binding.pry
       if @@items.include?(item)
-        @@items.each do |item|
           @@cart << item
           resp.write "added #{item}"
         end
