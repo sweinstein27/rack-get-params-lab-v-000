@@ -30,7 +30,6 @@ class Application
       if @@items.include?(item)
           @@cart << item
           resp.write "added #{item}"
-        end
       else
         resp.write "we don't have that item"
       end
