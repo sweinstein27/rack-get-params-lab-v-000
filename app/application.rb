@@ -17,6 +17,7 @@ class Application
     elsif req.path(/cart/)
       if @@cart.empty?
         resp.write "cart is empty"
+      else
       @@cart.each do |item|
         resp.write "#{item}\n"
       end
