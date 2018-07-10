@@ -27,7 +27,7 @@ class Application
     elsif req.path.match(/add/)
       item = req.params["item"]
       binding.pry
-      if @@items.match(item)
+      if @@items.include?(item)
         @@items.each do |item|
           @@cart << item
           resp.write "added #{item}"
