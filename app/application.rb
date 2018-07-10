@@ -26,6 +26,7 @@ class Application
       @@items.each do |item|
         @@cart << item
       end
+      @@cart
     else
       resp.write "Path Not Found"
     end
