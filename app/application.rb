@@ -23,9 +23,12 @@ class Application
         end
       end
     elsif req.path.match(/add/)
-      @@items.each do |item|
+      if @@items.match(item)
+        @@items.each do |item|
         @@cart << item
         resp.write "added #{item}"
+      else
+        resp.write "we don't have that item"
       end
 
     else
